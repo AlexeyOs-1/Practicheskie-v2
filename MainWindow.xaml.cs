@@ -117,5 +117,10 @@ namespace WpfApp1
             else MessageBox.Show("Файл для импорта не выбран!");
 
         }
+
+        private void Admin_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame?.Navigate(new AdminMenu());
+        }
     }
 }

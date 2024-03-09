@@ -15,6 +15,7 @@
         <Button x:Name="ButtonBack" Content="Назад" HorizontalAlignment="Left" Margin="127,0,0,0" VerticalAlignment="Center" Width="80" Click="ButtonBack_Click" Height="31" FontSize="12" FontFamily="Arial"/>
         <Frame x:Name="MainFrame" Source="Pages/AuthPage.xaml" Grid.Row="1" Navigated="MainFrame_OnNavigated"/>
         <Button x:Name="Registration" Content="Регистрация" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="101" Click="Registration_Click" FontSize="12" Height="32"/>
+        <Button x:Name="Admin" Content="Администраторам" HorizontalAlignment="Left" Margin="377,0,0,0" VerticalAlignment="Center" Height="32" FontSize="12" Click="Admin_Click"/>
         <Button x:Name="Export" Content="Экспорт" HorizontalAlignment="Left" Margin="596,2,0,0" VerticalAlignment="Top" Width="75" Click="Export_Click" Height="31" FontSize="12"/>
         <Button x:Name="Import" Content="Импорт" HorizontalAlignment="Left" Margin="688,3,0,0" VerticalAlignment="Top" Width="75" Height="30" FontSize="12" Click="Import_Click"/>
     </Grid>

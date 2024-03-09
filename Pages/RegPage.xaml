@@ -43,8 +43,8 @@
                     <GradientStop Color="#FF9E9E9E" Offset="1"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
-            <Button Content="Администратор" Background="#FF9E9E9E"/>
-            <Button Content="Программист" Background="#FF9E9E9E"/>
+            <Button Content="Администратор" Background="#fff"/>
+            <Button Content="Пользователь" Background="#fff"/>
             <ComboBox.ToolTip>
                 <ToolTip>
                     Выбор роли сотрудника

@@ -76,28 +76,37 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Employees.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Employees.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="Employees.cs">
-      <DependentUpon>Employees.tt</DependentUpon>
+      <DependentUpon>EmployeesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Employees.Designer.cs">
+    <Compile Include="EmployeesModel.Context.cs" />
+    <Compile Include="EmployeesModel.Context1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Employees.edmx</DependentUpon>
+      <DependentUpon>EmployeesModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Employees1.cs">
+    <Compile Include="EmployeesModel.cs" />
+    <Compile Include="EmployeesModel.designer.cs">
+      <DependentUpon>EmployeesModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeesModel1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Employees.tt</DependentUpon>
+      <DependentUpon>EmployeesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeesModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeesModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AddEditPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\AdminMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -105,6 +114,14 @@
     <Page Include="Pages\AuthPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DriverMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Employees.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\RegPage.xaml">
       <SubType>Designer</SubType>
@@ -116,11 +133,20 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AddEditPage.xaml.cs">
+      <DependentUpon>AddEditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AdminMenu.xaml.cs">
       <DependentUpon>AdminMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DriverMenu.xaml.cs">
+      <DependentUpon>DriverMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Employees.xaml.cs">
+      <DependentUpon>Employees.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
@@ -145,12 +171,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Employees.edmx">
+    <EntityDeploy Include="EmployeesModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Employees.Designer.cs</LastGenOutput>
+      <LastGenOutput>EmployeesModel1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Employees.edmx.diagram">
-      <DependentUpon>Employees.edmx</DependentUpon>
+    <None Include="EmployeesModel.edmx.diagram">
+      <DependentUpon>EmployeesModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -164,16 +190,15 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="Employees.Context.tt">
+    <Content Include="EmployeesModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Employees.edmx</DependentUpon>
-      <LastGenOutput>Employees.Context.cs</LastGenOutput>
+      <LastGenOutput>EmployeesModel.Context1.cs</LastGenOutput>
     </Content>
-    <Content Include="Employees.tt">
+    <Content Include="EmployeesModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Employees.edmx</DependentUpon>
-      <LastGenOutput>Employees1.cs</LastGenOutput>
+      <LastGenOutput>EmployeesModel1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

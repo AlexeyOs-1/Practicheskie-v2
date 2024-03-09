@@ -12,28 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp1.Pages;
 
 namespace WpfApp1.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AdminMenu.xaml
+    /// Логика взаимодействия для DriverMenu.xaml
     /// </summary>
-    public partial class AdminMenu : Page
+    public partial class DriverMenu : Page
     {
-        public AdminMenu()
+        public DriverMenu()
         {
             InitializeComponent();
-        }
-
-        private void OpenTable_Click(object sender, RoutedEventArgs e)
-        {
-            AdminFrame?.Navigate(new Employees());
-        }
-
-        private void AdminFrame_Navigated(object sender, NavigationEventArgs e)
-        {
-
         }
     }
 }
