@@ -41,42 +41,6 @@ namespace WpfApp1.Pages
         private void ButtonSave_OnClick(object sender, RoutedEventArgs e)
         {
 
-            StringBuilder errors = new StringBuilder();
-
-            if (_currentEmployee.ID == null)
-                errors.AppendLine("Выберите ID сотрудника!");
-
-            if (string.IsNullOrWhiteSpace(_currentEmployee.Login))
-                errors.AppendLine("Укажите логин сотрудника!");
-
-            if (string.IsNullOrWhiteSpace((_currentEmployee.Password)))
-                errors.AppendLine("Укажите пароль!");
-
-            if (string.IsNullOrWhiteSpace(_currentEmployee.Role))
-                errors.AppendLine("Укажите роль сотрудника!");
-
-            if (string.IsNullOrWhiteSpace(_currentEmployee.FIO))
-                errors.AppendLine("Укажите ФИО сотрудника");
-
-            if (errors.Length > 0)
-            {
-                MessageBox.Show(errors.ToString());
-                return;
-            }
-
-            if (_currentEmployee.ID == 0)
-                EmployeesEntities.GetContext().Employees.Add(_currentEmployee);
-
-            try
-            {
-                EmployeesEntities.GetContext().SaveChanges();
-                MessageBox.Show("Данные успешно сохранены!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-
         }
     }
 }
