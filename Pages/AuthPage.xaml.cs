@@ -59,6 +59,9 @@ namespace WpfApp1.Pages
                     case "Пользователь":
                         NavigationService?.Navigate(new UserMenu());
                         break;
+                    case "Водитель":
+                        NavigationService?.Navigate(new UserMenu());
+                        break;
                 }
             }
         }

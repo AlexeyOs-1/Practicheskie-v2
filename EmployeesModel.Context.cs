@@ -12,19 +12,31 @@ namespace WpfApp1
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class EmployeesEntities : DbContext
     {
+        private static EmployeesEntities _context;
+
         public EmployeesEntities()
             : base("name=EmployeesEntities")
         {
         }
-    
+        public static EmployeesEntities GetContext()
+
+        {
+
+            if (_context == null)
+
+                _context = new EmployeesEntities();
+
+            return _context;
+
+        }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
         public virtual DbSet<Employees> Employees { get; set; }
     }
 }
